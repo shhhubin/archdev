@@ -102,7 +102,7 @@ micro /etc/locale.gen
 locale-gen
 
 # Настраиваем время
-ln -sf /usr/share/zoneinfo/Europe/Kiev /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 hwclock --systohc
 
 # Указать имя хоста
@@ -145,7 +145,7 @@ micro arch.conf
 
 # Вставляем в arch.conf следующее:
 # UUID можно узнать командой blkid
-title Arch Linux by ZProger
+title Arch Totem
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
 options rw cryptdevice=UUID=uuid_от_/dev/sda2:main root=/dev/mapper/main-root
@@ -184,8 +184,8 @@ exec bspwm
 
 и выполните сборку оболочки используя данные команды:
 ```bash
-git clone https://github.com/Zproger/bspwm-dotfiles.git
-cd bspwm-dotfiles
+git clone https://github.com/shhhubin/archdev.git
+cd arcdev
 python3 Builder/install.py
 ```
 
